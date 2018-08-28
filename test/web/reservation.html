@@ -1,0 +1,257 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>DreamStar Paradise</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+<link href="static/css/style.css" rel="stylesheet" type="text/css" media="all" />
+<script src="static/js/jquery.min.js"></script>
+<!--start slider -->
+<link rel="stylesheet" href="static/css/fwslider.css" media="all">
+<script src="static/js/jquery-ui.min.js"></script>
+<script src="static/js/css3-mediaqueries.js"></script>
+<script src="static/js/fwslider.js"></script>
+<!--end slider -->
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		  <script>
+		  $(document).ready(function () {
+    	$("#type").change(function () {
+        var val = $(this).val();
+        if (val == "LeCastle") {
+            $("#size").html("<option value=''>--select--</option><option value='budgetromantic'>Budget Romantic Duo</option><option value='romantic'>Romantic Duo</option><option value='quadratic'>Quadratic Duplet</option><option value='nuclear'>Nuclear Area</option><option value='star'>Star Longue</option> <option value='banquet'>Banquet Hall</option><option value='dormitory'>Dormitory Territory</option>");
+        } else if (val == "BlueStar") {
+            $("#size").html("<option value=''>--select--</option><option value='cottage'>Cottage/Home Stay</option>");
+        } else if (val == "Madhu") {
+            $("#size").html("<option value=''>--select--</option><option value='romantic'>Romantic Duo</option><option value='quadratic'>Quadratic Duplet</option><option value='nuclear'>Nuclear Area</option><option value='banquet'>Banquet Hall</option>");
+        } else if (val == "Prince") {
+            $("#size").html("<option value=''>--select--</option><option value='cottage'>Cottage/Home Stay</option>");
+        }
+    });
+});
+</script>
+<!---strat-date-piker-->
+	<link href="http://code.jquery.com/ui/1.11.3/themes/smoothness/jquery-ui.css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="http://code.jquery.com/ui/1.11.3/jquery-ui.min.js"></script>
+		  <script>
+		  	var rip ;
+		  	var f;
+			var disableddates = [];
+			function myFunction() {
+		    rip = document.getElementById("size").value;
+		    f = document.getElementById("type").value;
+			var obj = JSON.parse({{ dates|tojson|safe }});
+			disableddates = obj[f];
+			disableddates = disableddates[rip];
+			console.log(obj);
+			DisableSpecificDates();
+		}
+		  	function DisableSpecificDates(date) {
+			var string = jQuery.datepicker.formatDate('yy-mm-dd', date);
+			return [disableddates.indexOf(string) == -1];
+ 		}
+			$(function() {
+				    $( "#datepicker,#datepicker1" ).datepicker({
+		  	minDate : 'today',
+		  	maxDate : '+30d',
+		  	beforeShowDay: DisableSpecificDates,
+		  }).attr('readonly', true);
+				  });
+		  </script>
+<!---/End-date-piker-->
+<link type="text/css" rel="stylesheet" href="static/css/JFGrid.css" />
+<link type="text/css" rel="stylesheet" href="static/css/JFFormStyle-1.css" />
+		<script type="text/javascript" src="static/js/JFCore.js"></script>
+		<script type="text/javascript" src="static/js/JFForms.js"></script>
+		<!-- Set here the key for your domain in order to hide the watermark on the web server -->
+		<script type="text/javascript">
+			(function() {
+				JC.init({
+					domainKey: ''
+				});
+				})();
+		</script>
+<!--nav-->
+<script>
+		$(function() {
+			var pull 		= $('#pull');
+				menu 		= $('nav ul');
+				menuHeight	= menu.height();
+
+			$(pull).on('click', function(e) {
+				e.preventDefault();
+				menu.slideToggle();
+			});
+
+			$(window).resize(function(){
+        		var w = $(window).width();
+        		if(w > 320 && menu.is(':hidden')) {
+        			menu.removeAttr('style');
+        		}
+    		});
+		});
+</script>
+<script>
+    $(function(){
+      // bind change event to select
+      $('#dynamic_select').on('change', function () {
+          var url = $(this).val(); // get selected value
+          if (url) { // require a URL
+              window.location = url; // redirect
+          }
+          return false;
+      });
+    });
+</script>
+
+
+
+</head>
+<body>
+<!-- start header -->
+<div class="header_bg">
+<div class="wrap">
+	<div class="header">
+		<div class="logo">
+			<a href="/"><img src="static/images/drm.png" alt="" style="width: 25%"></a>
+		</div>
+		<div class="h_right">
+			<!--start menu -->
+			<ul class="menu">
+				<li ><a href="/">Home</a></li> |
+				<li style="width: 72px;">
+					<select id="dynamic_select" style="background: transparent;border: transparent;" >
+					  <option value=""  selected>Hotel</option>
+					  <option value="/lecastle" >LeCastle</option>
+					  <option value="/bluestar">BlueStar</option>
+					  <option value="/madhu">Madhu Residency</option>
+					  <option value="/prince">Prince Cottage</option>
+					</select>
+				</li> |
+				<li class="active"><a href="/booking">reservation</a></li> |
+				<li><a href="/services">activities</a></li> |
+				<li><a href="/packages">Packages</a></li>
+				<li><a href="/contact">contact</a></li>
+				<div class="clear"></div>
+			</ul>
+			<!-- start profile_details -->
+					<!-- <form class="style-1 drp_dwn">
+						<div class="row">
+							<div class="grid_3 columns">
+								<select class="custom-select" id="select-1">
+									<option selected="selected">EN</option>
+									<option>USA</option>
+									<option>AUS</option>
+									<option>UK</option>
+									<option>IND</option>
+								</select>
+							</div>		
+						</div>		
+					</form> -->
+		</div>
+		<div class="clear"></div>
+		<div class="top-nav">
+		<nav class="clearfix">
+				<ul>
+				<li ><a href="/">Home</a></li> 
+				<li><select id="dynamic_select" style="background: transparent;border: transparent;" >
+					  <option value="" selected>Hotel</option>
+					  <option value="/lecastle" >LeCastle</option>
+					  <option value="/">BlueStar</option>
+					  <option value="/madhu">Madhu Residency</option>
+					  <option value="/prince">Prince Cottage</option>
+					</select></li> 
+				<li class="active"><a href="/booking">reservation</a></li> 
+				<li><a href="/services">activities</a></li> 
+				<li><a href="/packages">Packages</a></li>
+				<li><a href="/contact">contact</a></li>
+				</ul>
+				<a href="#" id="pull">Menu</a>
+			</nav>
+		</div>
+	</div>
+</div>
+</div>
+<!--start main -->
+<div class="main_bg">
+<div class="wrap">
+	<div class="main">
+		<div class="res_online">
+			<h4>basic information</h4>
+			<p class="para">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+		</div>		
+		<hr>	
+			<div class="span_of_1">
+				<div class="contact-form">
+				<form method="post">
+		<h2 style="padding-top: 10px">Your Name :</h2>
+		<input type="text" name="name" value="{{Name}}">
+		<h2 style="padding-top: 10px">Your Email :</h2>
+		<input type="text" name="mail" value="{{Mail}}">
+		<h2 style="padding-top: 10px">Phone Number :</h2>
+		<input type="number" name="number" value="{{Number}}">
+		<h2 style="padding-top: 10px">Number of Adults :</h2>
+		<input type="number" name="adults">
+		<h2 style="padding-top: 10px">Number of Children :</h2>
+		<input type="number" name="children"><p style="color: red">Age: 4-10</p>
+		<h2 style="padding-top: 10px">Select Hotel :</h2>
+		<select id="type" onchange="myFunction()" style="padding:10px" name="hotel">
+		    <option value="">--Select an Item--</option>
+		    <option value="LeCastle">LeCastle </option>
+		    <option value="BlueStar">BlueStar</option>
+		    <option value="Madhu">Madhu Residency</option>
+		    <option value="Prince">Prince Cottage</option>
+		</select>
+		<h2 style="padding-top: 10px">Select Room :</h2>
+		<select id="size" style="padding: 10px" onchange="myFunction()" name="rooms">
+		    <option value="">-- select one -- </option>
+		</select>
+		<div class="span_of_6">
+		<h2 style="padding-top: 10px">Arrival Date :</h2>
+		<input id="datepicker" type="text" name="arrival" readonly="readonly" value="{{Arrival}}"></div>
+		<div class="span_of_6">
+		<h2 style="padding-top: 10px">Depature Date :</h2>
+		<input id="datepicker1" type="text" name="depature" readonly="readonly" value="{{Depature}}"></div>
+		<h4 style="color: red">{{error}}</h4>
+		<hr>
+		<button type="submit" style="width: 25%;background-color: rgba(13, 199, 13, 0.78);height: 40px; position: inherit;float: right">Book</button>
+	</form>
+	<!-- <h2>{{dates}}</h2> -->
+			</div>
+			</div>
+	</div>
+</div>
+</div>		
+<!--start main -->
+<div class="footer_bg">
+<div class="wrap">
+<div class="footer">
+			<div class="copy">
+				<p class="link"><span>Policies :  <a href="/refund">Refund and Cancellation</a> | <a href="/privacy">Privacy Policies</a> | <a href="/terms">Terms and Conditions</a></span></p>
+			</div>
+			<div class="f_nav">
+				<ul>
+					<li><a href="/">home</a></li>
+					<li><a href="#">Hotels</a></li>
+					<li><a href="/booking">reservation</a></li>
+					<li><a href="/packages">Packages</a></li>
+					<li><a href="/contact">Contact</a></li>
+				</ul>
+			</div>
+			<div class="soc_icons">
+				<ul>
+					<li><a class="icon1" href="#"></a></li>
+					<li><a class="icon2" href="#"></a></li>
+					<li><a class="icon3" href="#"></a></li>
+					<li><a class="icon4" href="#"></a></li>
+					<li><a class="icon5" href="#"></a></li>
+					<div class="clear"></div>
+				</ul>	
+			</div>
+			<div class="clear"></div>
+</div>
+</div>
+</div>		
+</body>
+</html>

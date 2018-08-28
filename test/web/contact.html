@@ -1,0 +1,221 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>DreamStar Paradise</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+<link href="static/css/style.css" rel="stylesheet" type="text/css" media="all" />
+<script src="static/js/jquery.min.js"></script>
+<!--start slider -->
+<link rel="stylesheet" href="static/css/fwslider.css" media="all">
+<script src="static/js/jquery-ui.min.js"></script>
+<script src="static/js/css3-mediaqueries.js"></script>
+<script src="static/js/fwslider.js"></script>
+<!--end slider -->
+<!---strat-date-piker-->
+<link rel="stylesheet" href="static/css/jquery-ui.css" />
+<script src="static/js/jquery-ui.js"></script>
+		  <script>
+				  $(function() {
+				    $( "#datepicker,#datepicker1" ).datepicker();
+				  });
+		  </script>
+<!---/End-date-piker-->
+<link type="text/css" rel="stylesheet" href="static/css/JFGrid.css" />
+<link type="text/css" rel="stylesheet" href="static/css/JFFormStyle-1.css" />
+		<script type="text/javascript" src="static/js/JFCore.js"></script>
+		<script type="text/javascript" src="static/js/JFForms.js"></script>
+		<!-- Set here the key for your domain in order to hide the watermark on the web server -->
+		<script type="text/javascript">
+			(function() {
+				JC.init({
+					domainKey: ''
+				});
+				})();
+		</script>
+<!--nav-->
+<script>
+		$(function() {
+			var pull 		= $('#pull');
+				menu 		= $('nav ul');
+				menuHeight	= menu.height();
+
+			$(pull).on('click', function(e) {
+				e.preventDefault();
+				menu.slideToggle();
+			});
+
+			$(window).resize(function(){
+        		var w = $(window).width();
+        		if(w > 320 && menu.is(':hidden')) {
+        			menu.removeAttr('style');
+        		}
+    		});
+		});
+</script>
+<script>
+    $(function(){
+      // bind change event to select
+      $('#dynamic_select').on('change', function () {
+          var url = $(this).val(); // get selected value
+          if (url) { // require a URL
+              window.location = url; // redirect
+          }
+          return false;
+      });
+    });
+</script>
+
+</head>
+<body>
+<!-- start header -->
+<div class="header_bg">
+<div class="wrap">
+	<div class="header">
+		<div class="logo">
+			<a href="/"><img src="static/images/drm.png" alt="" style="width: 25%"></a>
+		</div>
+		<div class="h_right">
+			<!--start menu -->
+			<ul class="menu">
+				<li ><a href="/">Home</a></li> |
+				<li style="width: 72px;">
+					<select id="dynamic_select" style="background: transparent;border: transparent;" >
+					  <option value=""  selected>Hotel</option>
+					  <option value="/lecastle" >LeCastle</option>
+					  <option value="/bluestar">BlueStar</option>
+					  <option value="/madhu">Madhu Residency</option>
+					  <option value="/prince">Prince Cottage</option>
+					</select>
+				</li> |
+				<li><a href="/booking">reservation</a></li> |
+				<li><a href="/services">activities</a></li> |
+				<li><a href="/packages">Packages</a></li> |
+				<li class="active"><a href="/contact">contact</a></li>
+				<div class="clear"></div>
+			</ul>
+			<!-- start profile_details -->
+					<!-- <form class="style-1 drp_dwn">
+						<div class="row">
+							<div class="grid_3 columns">
+								<select class="custom-select" id="select-1">
+									<option selected="selected">EN</option>
+									<option>USA</option>
+									<option>AUS</option>
+									<option>UK</option>
+									<option>IND</option>
+								</select>
+							</div>		
+						</div>		
+					</form> -->
+		</div>
+		<div class="clear"></div>
+		<div class="top-nav">
+		<nav class="clearfix">
+				<ul>
+				<li ><a href="/">Home</a></li> 
+				<li><select id="dynamic_select" style="background: transparent;border: transparent;" >
+					  <option value="" selected>Hotel</option>
+					  <option value="/lecastle" >LeCastle</option>
+					  <option value="/bluestar">BlueStar</option>
+					  <option value="/madhu">Madhu Residency</option>
+					  <option value="/prince">Prince Cottage</option>
+					</select></li> 
+				<li><a href="/booking">reservation</a></li> 
+				<li><a href="/services">activities</a></li> 
+				<li><a href="/packages">Packages</a></li>
+				<li class="active"><a href="/contact">contact</a></li>
+				</ul>
+				<a href="#" id="pull">Menu</a>
+			</nav>
+		</div>
+	</div>
+</div>
+</div>
+<!--start main -->
+<div class="main_bg">
+<div class="wrap">
+	<div class="main">
+		<div class="contact">				
+				<div class="contact_left">
+					<div class="contact_info">
+			    	 	<h3>Find Us Here</h3>
+			    	 		<div class="map">
+					   			<iframe width="100%" height="175" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCkLzo26FhjfQwC8qaWozpB0wZeVAZDS5c&q=Kodaikanal,TamilNadu+India"></iframe><br><!-- <small><a href="https://maps.google.co.in/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Lighthouse+Point,+FL,+United+States&amp;aq=4&amp;oq=light&amp;sll=26.275636,-80.087265&amp;sspn=0.04941,0.104628&amp;ie=UTF8&amp;hq=&amp;hnear=Lighthouse+Point,+Broward,+Florida,+United+States&amp;t=m&amp;z=14&amp;ll=26.275636,-80.087265" style="color: #242424;text-shadow: 0 1px 0 #ffffff;text-align: left;font-size: 0.7125em;padding: 5px;font-weight: 600;">View Larger Map</a></small> -->
+					   		</div>
+      				</div>
+      			<div class="company_address">
+				     	<h3>Company Information :</h3>
+						<p>500 Lorem Ipsum Dolor Sit,</p>
+						<p>22-56-2-9 Sit Amet, Lorem,</p>
+						<p>USA</p>
+				   		<p>Phone:(00) 222 666 444</p>
+				   		<p>Fax: (000) 000 00 00 0</p>
+				 	 	<p>Email: <a href="mailto:info@mycompany.com">info(at)mycompany.com</a></p>
+				   		<p>Follow on: <a href="#">Facebook</a>, <a href="#">Twitter</a></p>
+				   </div>
+				</div>				
+				<div class="contact_right">
+				  <div class="contact-form">
+				  	<h3>Contact Us</h3>
+					    <form method="post">
+					    	<div>
+						    	<span><label>NAME</label></span>
+						    	<span><input name="userName" type="text" class="textbox"></span>
+						    </div>
+						    <div>
+						    	<span><label>E-MAIL</label></span>
+						    	<span><input name="userEmail" type="text" class="textbox"></span>
+						    </div>
+						    <div>
+						     	<span><label>MOBILE</label></span>
+						    	<span><input name="userPhone" type="text" class="textbox"></span>
+						    </div>
+						    <div>
+						    	<span><label>SUBJECT</label></span>
+						    	<span><textarea name="userMsg"> </textarea></span>
+						    </div>
+						   <div>
+						   		<span><input type="submit" value="submit us"></span>
+						  </div>
+					    </form>
+				    </div>
+  				</div>		
+  				<div class="clear"></div>		
+		  </div>
+	</div>
+</div>
+</div>		
+<!--start main -->
+<div class="footer_bg">
+<div class="wrap">
+<div class="footer">
+			<div class="copy">
+				<p class="link"><span>Policies :  <a href="/refund">Refund and Cancellation</a> | <a href="/privacy">Privacy Policies</a> | <a href="/terms">Terms and Conditions</a></span></p>
+			</div>
+			<div class="f_nav">
+				<ul>
+					<li><a href="/">home</a></li>
+					<li><a href="#">Hotels</a></li>
+					<li><a href="/booking">reservation</a></li>
+					<li><a href="/packages">Packages</a></li>
+					<li><a href="/contact">Contact</a></li>
+				</ul>
+			</div>
+			<div class="soc_icons">
+				<ul>
+					<li><a class="icon1" href="#"></a></li>
+					<li><a class="icon2" href="#"></a></li>
+					<li><a class="icon3" href="#"></a></li>
+					<li><a class="icon4" href="#"></a></li>
+					<li><a class="icon5" href="#"></a></li>
+					<div class="clear"></div>
+				</ul>	
+			</div>
+			<div class="clear"></div>
+</div>
+</div>
+</div>		
+</body>
+</html>

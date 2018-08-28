@@ -1,0 +1,216 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>DreamStar Paradise</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+<link href="static/css/style.css" rel="stylesheet" type="text/css" media="all" />
+<script src="static/js/jquery.min.js"></script>
+<!--start slider -->
+<link rel="stylesheet" href="static/css/fwslider.css" media="all">
+<script src="static/js/jquery-ui.min.js"></script>
+<script src="static/js/css3-mediaqueries.js"></script>
+<script src="static/js/fwslider.js"></script>
+<!--end slider -->
+<!---strat-date-piker-->
+<link rel="stylesheet" href="static/css/jquery-ui.css" />
+<script src="static/js/jquery-ui.js"></script>
+		  <script>
+				  $(function() {
+				    $( "#datepicker,#datepicker1" ).datepicker();
+				  });
+		  </script>
+<!---/End-date-piker-->
+<link type="text/css" rel="stylesheet" href="static/css/JFGrid.css" />
+<link type="text/css" rel="stylesheet" href="static/css/JFFormStyle-1.css" />
+		<script type="text/javascript" src="static/js/JFCore.js"></script>
+		<script type="text/javascript" src="static/js/JFForms.js"></script>
+		<!-- Set here the key for your domain in order to hide the watermark on the web server -->
+		<script type="text/javascript">
+			(function() {
+				JC.init({
+					domainKey: ''
+				});
+				})();
+		</script>
+<!--nav-->
+<script>
+		$(function() {
+			var pull 		= $('#pull');
+				menu 		= $('nav ul');
+				menuHeight	= menu.height();
+
+			$(pull).on('click', function(e) {
+				e.preventDefault();
+				menu.slideToggle();
+			});
+
+			$(window).resize(function(){
+        		var w = $(window).width();
+        		if(w > 320 && menu.is(':hidden')) {
+        			menu.removeAttr('style');
+        		}
+    		});
+		});
+</script>
+<script>
+    $(function(){
+      // bind change event to select
+      $('#dynamic_select').on('change', function () {
+          var url = $(this).val(); // get selected value
+          if (url) { // require a URL
+              window.location = url; // redirect
+          }
+          return false;
+      });
+    });
+</script>
+
+</head>
+<body>
+<!-- start header -->
+<div class="header_bg">
+<div class="wrap">
+	<div class="header">
+		<div class="logo">
+			<a href="/"><img src="static/images/drm.png" alt="" style="width: 25%"></a>
+		</div>
+		<div class="h_right">
+			<!--start menu -->
+			<ul class="menu">
+				<li><a href="/">Home</a></li> |
+				<li style="width: 72px;">
+					<select id="dynamic_select" style="background: transparent;border: transparent;" class="active">
+					  <option value=""  selected>Hotel</option>
+					  <option value="/lecastle" >LeCastle</option>
+					  <option value="/bluestar">BlueStar</option>
+					  <option value="/madhu">Madhu Residency</option>
+					  <option value="/prince">Prince Cottage</option>
+					</select>
+				</li> |
+				<li><a href="booking">reservation</a></li> |
+				<li><a href="/services">activities</a></li> |
+				<li><a href="/packages">Packages</a></li>
+				<li><a href="/contact">contact</a></li>
+				<div class="clear"></div>
+			</ul>
+			<!-- start profile_details -->
+					<!-- <form class="style-1 drp_dwn">
+						<div class="row">
+							<div class="grid_3 columns">
+								<select class="custom-select" id="select-1">
+									<option selected="selected">EN</option>
+									<option>USA</option>
+									<option>AUS</option>
+									<option>UK</option>
+									<option>IND</option>
+								</select>
+							</div>		
+						</div>		
+					</form> -->
+		</div>
+		<div class="clear"></div>
+		<div class="top-nav">
+		<nav class="clearfix">
+				<ul>
+				<li><a href="/">Home</a></li> 
+				<li class="active"><select id="dynamic_select" style="background: transparent;border: transparent;" >
+					  <option value="" selected>Hotel</option>
+					  <option value="/lecastle" >LeCastle</option>
+					  <option value="/bluestar">BlueStar</option>
+					  <option value="/madhu">Madhu Residency</option>
+					  <option value="/prince">Prince Cottage</option>
+					</select></li> 
+				<li><a href="/booking">reservation</a></li> 
+				<li><a href="/services">activities</a></li> 
+				<li><a href="/packages">Packages</a></li>
+				<li><a href="/contact">contact</a></li>
+				</ul>
+				<a href="#" id="pull">Menu</a>
+			</nav>
+		</div>
+	</div>
+</div>
+</div>
+<!--start main -->
+<div class="main_bg">
+<div class="wrap">
+	<div class="main">
+		<div class="content">
+			<div class="room">
+				<h4 align="middle" style="padding-bottom: 5px">Prince Cottage</h4>
+				<p class="para">Prince Cottage is located at Vattakanal. Vattakanal is a hill
+station sort of village located 3km away from Kodaikanal,
+Tamil Nadu. One may find it an ideal place to retreat as the
+temperature is below 17 degree C during summer and is cold
+throughout the year. It is one of the best tourist places in
+recent times, where the foreigners never forget to visit such a
+splendorous village. Prince Cottage is located on such a
+serene environment which is very nearer to Dolphin’s Nose
+spot (important tourist spot). Trekking at early morning to
+Dolphin’s Nose would be a peculiar experience which will
+cherish in our memories for a prolonged time which is just
+few foot steps away from the cottage. </p>
+			</div>
+				<div class="grids_of_2">
+					<div class="grids_of_img">
+						<img src="static/images/pic1.jpg" alt=""/>
+					</div>
+					<div class="grids_of_para">
+						<h4 align="middle"> Cottage </h1>
+						<p class="para" style="height: 111px;">It is an individual cottage which stands alone, which will
+provide you an adventurous vacation too. Very rarely and if
+we are fortunate, we could even expect to have a look at
+some of the wild animals from the cottage. Periyakulam view
+point is few yards from the cottage where we could see the
+top view of Periyakulam town. Fire camp is available in the
+cottage to cherish the customers. Also, modular kitchen is
+provided to prepare their own delicious food. Even we are
+privileged to prepare the mouth-watering food for the
+customers. </p>
+						<a href="/booking">
+							<button style="width: 100px;height: 40px;float: right;background-color: #0091EA;">Book</button>
+						</a>
+					</div>
+					<div class="clear"></div>					
+				</div>
+				<hr>
+
+		</div>
+		<div class="clear"></div>
+	</div>
+</div>
+</div>		
+<!--start main -->
+<div class="footer_bg">
+<div class="wrap">
+<div class="footer">
+			<div class="copy">
+				<p class="link"><span>Policies :  <a href="/refund">Refund and Cancellation</a> | <a href="/privacy">Privacy Policies</a> | <a href="/terms">Terms and Conditions</a></span></p>
+			</div>
+			<div class="f_nav">
+				<ul>
+					<li><a href="/">home</a></li>
+					<li><a href="#">Hotels</a></li>
+					<li><a href="/booking">reservation</a></li>
+					<li><a href="/packages">Packages</a></li>
+					<li><a href="/contact">Contact</a></li>
+				</ul>
+			</div>
+			<div class="soc_icons">
+				<ul>
+					<li><a class="icon1" href="#"></a></li>
+					<li><a class="icon2" href="#"></a></li>
+					<li><a class="icon3" href="#"></a></li>
+					<li><a class="icon4" href="#"></a></li>
+					<li><a class="icon5" href="#"></a></li>
+					<div class="clear"></div>
+				</ul>	
+			</div>
+			<div class="clear"></div>
+</div>
+</div>
+</div>		
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DreamStar Paradise</title>
+  <style>
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    td, th {
+        border: 1px solid #dddddd;
+        text-align: center;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    }
+  </style>
+</head>
+<body>
+  <form method="post">
+    <h4>Hotel Name :
+    <select name="hotel">
+        <option value="">--Select an Item--</option>
+        <option value="LeCastle">LeCastle </option>
+        <option value="BlueStar">BlueStar</option>
+        <option value="Madhu">Madhu Residency</option>
+        <option value="Prince">Prince Cottage</option>
+    </select>
+    <input type="submit">
+    </h4>
+  </form>
+  <table>
+  <tr>
+    <th >{{Hotel}}</th>
+    <th colspan="30" >{{Month}}</th>
+  </tr>
+  <tr>
+  <td>Room</td>
+  {% for i in range(1,31) %}
+  <td>{{i}}</td>
+  {% endfor %}
+  </tr>
+  <h4>{{d}}</h4>
+
+</body>
+</html>

@@ -1,0 +1,661 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>DreamStar Paradise</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+<link href="static/css/style.css" rel="stylesheet" type="text/css" media="all" />
+<script src="static/js/jquery.min.js"></script>
+<!--start slider -->
+<link rel="stylesheet" href="static/css/fwslider.css" media="all">
+<script src="static/js/jquery-ui.min.js"></script>
+<script src="static/js/css3-mediaqueries.js"></script>
+<script src="static/js/fwslider.js"></script>
+<!--end slider -->
+<!---strat-date-piker-->
+<link rel="stylesheet" href="static/css/jquery-ui.css" />
+<script src="static/js/jquery-ui.js"></script>
+		  <script>
+				  $(function() {
+				    $( "#datepicker,#datepicker1" ).datepicker();
+				  });
+		  </script>
+<!---/End-date-piker-->
+<link type="text/css" rel="stylesheet" href="static/css/JFGrid.css" />
+<link type="text/css" rel="stylesheet" href="static/css/JFFormStyle-1.css" />
+		<script type="text/javascript" src="static/js/JFCore.js"></script>
+		<script type="text/javascript" src="static/js/JFForms.js"></script>
+		<!-- Set here the key for your domain in order to hide the watermark on the web server -->
+		<script type="text/javascript">
+			(function() {
+				JC.init({
+					domainKey: ''
+				});
+				})();
+		</script>
+<!--nav-->
+<script>
+		$(function() {
+			var pull 		= $('#pull');
+				menu 		= $('nav ul');
+				menuHeight	= menu.height();
+
+			$(pull).on('click', function(e) {
+				e.preventDefault();
+				menu.slideToggle();
+			});
+
+			$(window).resize(function(){
+        		var w = $(window).width();
+        		if(w > 320 && menu.is(':hidden')) {
+        			menu.removeAttr('style');
+        		}
+    		});
+		});
+</script>
+<script>
+    $(function(){
+      // bind change event to select
+      $('#dynamic_select').on('change', function () {
+          var url = $(this).val(); // get selected value
+          if (url) { // require a URL
+              window.location = url; // redirect
+          }
+          return false;
+      });
+    });
+</script>
+
+</head>
+
+
+<body>
+<!-- start header -->
+<div class="header_bg">
+<div class="wrap">
+	<div class="header">
+		<div class="logo">
+			<a href="/"><img src="static/images/drm.png" alt="" style="width: 25%"></a>
+		</div>
+		<div class="h_right">
+			<!--start menu -->
+			<ul class="menu">
+				<li><a href="/">Home</a></li> |
+				<li style="width: 72px;">
+					<select id="dynamic_select" style="background: transparent;border: transparent;" class="active">
+					  <option value=""  selected>Hotel</option>
+					  <option value="/lecastle" >LeCastle</option>
+					  <option value="/bluestar">BlueStar</option>
+					  <option value="/madhu">Madhu Residency</option>
+					  <option value="/prince">Prince Cottage</option>
+					</select>
+				</li> |
+				<li><a href="booking">reservation</a></li> |
+				<li><a href="/services">activities</a></li> |
+				<li class="active"><a href="/packages">Packages</a></li> |
+				<li><a href="/contact">contact</a></li>
+				<div class="clear"></div>
+			</ul>
+			<!-- start profile_details -->
+					<!-- <form class="style-1 drp_dwn">
+						<div class="row">
+							<div class="grid_3 columns">
+								<select class="custom-select" id="select-1">
+									<option selected="selected">EN</option>
+									<option>USA</option>
+									<option>AUS</option>
+									<option>UK</option>
+									<option>IND</option>
+								</select>
+							</div>		
+						</div>		
+					</form> -->
+		</div>
+		<div class="clear"></div>
+		<div class="top-nav">
+		<nav class="clearfix">
+				<ul>
+				<li><a href="/">Home</a></li> 
+				<li class="active"><select id="dynamic_select" style="background: transparent;border: transparent;" >
+					  <option value="" >Hotel</option>
+					  <option value="/lecastle" selected>LeCastle</option>
+					  <option value="/bluestars">BlueStar</option>
+					  <option value="/madhu">Madhu Residency</option>
+					  <option value="/prince">Prince Cottage</option>
+					</select></li> 
+				<li><a href="/booking">reservation</a></li> 
+				<li><a href="/services">activities</a></li> 
+				<li><a href="/packages">Packages</a></li> 
+				<li><a href="/contact">contact</a></li>
+				</ul>
+				<a href="#" id="pull">Menu</a>
+			</nav>
+		</div>
+	</div>
+</div>
+</div>
+<!--start main -->
+<div class="main_bg">
+<div class="wrap">
+	<div class="main">
+		<div class="content">
+			<div class="room">
+				<h4 align="middle" style="padding-bottom: 5px">DreamStar Paradise Packages</h4>
+				<p class="para">DreamStar Paradise is situated in the heart of Kodaikanal and it is very nearer to the lake which is of walkable distance. This DreamStar Paradise under Dream Star Paradise is governed by an experts who are proficient in this field for 20 years. They are residing at Kodaikanal for more than 40 years and well known about the nook and corner of the town.</p>
+			</div>
+			<div class="grids_of_2">
+					<div class="grids_of_img">
+						<img src="static/images/g4.jpg" alt=""/>
+					</div>
+					<div class="grids_of_para">
+						<h4 align="middle" style="padding-bottom: 5px; font-weight:bold;">Duo Package</h4>
+					<h1 align="left" style="font-weight: bold; padding-left: 10%; padding-bottom: 20px;">Day-1 : Sight Seeing around the lake (By Walk)</h1>
+					<h1 align="left" style="font-weight: bold; padding-left: 10%; padding-bottom: 20px;">Day-2 : Sight seeing places (pick up and drop will be from Hotel)</h1>
+					<ul align="left" style="font-style: italic; padding-left: 20%; padding-bottom: 20px;">
+						<li>Coakers Walk,</li>
+						<li>Vaigai Dam View,</li>
+					</ul>
+						<a href="#Duo Package">
+							<button style="width: 100px;height: 40px;float: right;background-color: #0091EA;">Read More...</button>
+						</a>
+					</div>
+					<div class="clear"></div>					
+				</div>
+			<div id="Duo Package" class="modalDialog">
+			    <div>	<a href="#close" title="Close" class="close">X</a>
+				<div class="grids_of_2">
+					<h4 align="middle" style="padding-bottom: 5px; font-size: 30px; font-style:italic;">Duo Package</h4>
+					<img src="/images/spr.png" style="display: block; margin: 0 auto;padding-bottom: 10px">
+					<h1 align="left" style="font-size: 120%; font-weight: bold; padding-left: 10%; padding-bottom: 20px;">Day-1 : Sight Seeing around the lake (By Walk)</h1>
+					<h1 align="left" style="font-size: 120%; font-weight: bold; padding-left: 10%; padding-bottom: 20px;">Day-2 : Sight seeing places (pick up and drop will be from Hotel)</h1>
+					<ul align="left" style="font-size: 120%; font-style: italic; padding-left: 20%; padding-bottom: 20px;">
+						<li>Coakers Walk</li>
+						<li>Vaigai Dam View</li>
+						<li>Upper Lake View</li>
+						<li>Moiré Point</li>						
+						<li>Shanthi Valley</li>
+						<li>Green Valley View(sucid point)</li>
+						<li>Pine Tree Forest</li>
+						<li>Guna Cave(devils kitchen)</li>
+						<li>Piller Rock</li>
+						<li>Golf Course</li>
+						<li>Pambar Falls</li>
+					</ul>
+					<h1 align="left" style="font-size: 120%; font-weight: bold; padding-left: 10%; padding-bottom: 20px;">Day-3 : Picnic (Travel Cab Charge) </h1>
+					<ul align="left" style="font-size: 120%; font-style: italic; padding-left: 20%; padding-bottom: 20px;">
+						<li>La Saleth Church</li>
+						<li>Vattakanal Falls</li>
+						<li>Bear Shola Falls</li>
+						<li>Lion Cave</li>
+						<li>Mountain View Echo Rock</li>
+						<li>Dolphin Nose</li>
+						<li>500 Years Old Tree</li>
+						<li>Kodai Lake or City Drop</li>
+					</ul>
+					<h1 align="left" style="font-size: 120%; font-weight: bold; padding-left: 10%; padding-bottom: 20px;">Package Complimentary </h1>
+					<ul align="left" style="font-size: 120%; font-style: italic; padding-left: 20%; padding-bottom: 20px;">
+						<li>3 days Breakfast</li>
+						<li>2 Night Accomodation</li>
+						<li>Morning Bed coffee/ tea for 3 days</li>
+						<li>2 Water Bottels</li>
+					</ul>
+					<h1 style="width: 135px;height: 40px;float: left; position: absolute; left: 10%; color: #0091EA; font-size: 150%;"> INR : 7,600</h1>
+					<a href="/booking">
+						<button style="width: 100px;height: 40px;position: absolute; float: right; right: 10%; background-color: #0091EA; margin-bottom: 10px;">Book</button>
+					</a>
+					<div class="clear"></div>				
+				</div>
+			    </div>
+			</div>
+
+			<hr>
+
+			<div class="grids_of_2">
+					<div class="grids_of_img">
+						<img src="static/images/g4.jpg" alt=""/>
+					</div>
+					<div class="grids_of_para">
+						<h4 align="middle" style="padding-bottom: 5px; font-weight:bold;">HoneyMoon Package</h4>
+					<h1 align="left" style="font-weight: bold; padding-left: 10%; padding-bottom: 20px;">Day-1 : Sight seeing places (pick up and drop will be from Hotel)</h1>
+					<h1 align="left" style="font-weight: bold; padding-left: 10%; padding-bottom: 20px;">Day-2 : Sight seeing places (pick up and drop will be from Hotel)</h1>
+					<ul align="left" style="font-style: italic; padding-left: 20%; padding-bottom: 20px;">
+						<li>Coakers Walk,</li>
+						<li>Vaigai Dam View,</li>
+					</ul>
+						<a href="#HoneyMoon Package">
+							<button style="width: 100px;height: 40px;float: right;background-color: #0091EA;">Read More...</button>
+						</a>
+					</div>
+					<div class="clear"></div>					
+				</div>
+
+			<div id="HoneyMoon Package" class="modalDialog">
+			    <div>	<a href="#close" title="Close" class="close">X</a>
+				<div class="grids_of_2">
+					<h4 align="middle" style="padding-bottom: 5px; font-size: 30px; font-style:italic;">HoneyMoon Package</h4>
+					<img src="/images/spr.png" style="display: block; margin: 0 auto;padding-bottom: 10px">
+					<h1 align="left" style="font-size: 120%; font-weight: bold; padding-left: 10%; padding-bottom: 20px;">Day-1 : Sight seeing places (pick up and drop will be from Hotel)</h1>
+					<ul align="left" style="font-size: 120%; font-style: italic; padding-left: 20%; padding-bottom: 20px;">
+						<li>Coakers Walk</li>
+						<li>Vaigai Dam View</li>
+						<li>Upper Lake View</li>
+						<li>Moiré Point</li>						
+						<li>Shanthi Valley</li>
+						<li>Green Valley View(sucid point)</li>
+						<li>Pine Tree Forest</li>
+						<li>Guna Cave(devils kitchen)</li>
+						<li>Piller Rock</li>
+						<li>Golf Course</li>
+						<li>Pambar Falls</li>
+					</ul>
+					<h1 align="left" style="font-size: 120%; font-weight: bold; padding-left: 10%; padding-bottom: 20px;">Day-2 : Picnic (Travel Cab Charge) </h1>
+					<ul align="left" style="font-size: 120%; font-style: italic; padding-left: 20%; padding-bottom: 20px;">
+						<li>La Saleth Church</li>
+						<li>Vattakanal Falls</li>
+						<li>Bear Shola Falls</li>
+						<li>Lion Cave</li>
+						<li>Mountain View Echo Rock</li>
+						<li>Dolphin Nose</li>
+						<li>500 Years Old Tree</li>
+						<li>Kodai Lake or City Drop</li>
+					</ul>
+					<h1 align="left" style="font-size: 120%; font-weight: bold; padding-left: 10%; padding-bottom: 20px;">Day-3 : Forest Sight Seen / Trekking (Travel Cab Charge) </h1>
+					<ul align="left" style="font-size: 120%; font-style: italic; padding-left: 20%; padding-bottom: 20px;">
+						<li>Silent Valley,</li>
+						<li>Green Mountain View,</li>
+						<li>Fire Tower,</li>
+						<li>Medicine Forest View,</li>
+						<li>Cap’s Fly Valley,</li>
+						<li>Beijam Lake View,</li>
+						<li>Berijam Lake,</li>
+						<li>Kodai City Drop.</li>
+					</ul>
+					<h1 align="left" style="font-size: 120%; font-weight: bold; padding-left: 10%; padding-bottom: 20px;">Package Complimentary </h1>
+					<ul align="left" style="font-size: 120%; font-style: italic; padding-left: 20%; padding-bottom: 20px;">
+						<li>Welcome Drink on Arrival,</li>
+						<li>3 days Breakfast,</li>
+						<li>2 Night Accomodation,</li>
+						<li>Flower Decoration 1 Night,</li>
+						<li>Honeymoon Cake,</li>
+						<li>Morning Bed coffee/ tea for 3 days,</li>
+						<li>2 Water Bottels.</li>
+					</ul>
+					<h1 style="width: 135px;height: 40px;float: left; position: absolute; left: 10%; color: #0091EA; font-size: 150%;"> INR : 14,100</h1>
+					<a href="/booking">
+						<button style="width: 100px;height: 40px;position: absolute; float: right; right: 10%; background-color: #0091EA; margin-bottom: 10px;">Book</button>
+					</a>
+					<div class="clear"></div>				
+				</div>
+			    </div>
+			</div>
+
+			<hr>
+
+			<div class="grids_of_2">
+					<div class="grids_of_img">
+						<img src="static/images/g4.jpg" alt=""/>
+					</div>
+					<div class="grids_of_para">
+						<h4 align="middle" style="padding-bottom: 5px; font-weight : bold;">Budget Package</h4>
+					<h1 align="left" style="font-weight: bold; padding-left: 10%; padding-bottom: 20px;">Day-1 : Sight Seeing around the lake (By Walk)</h1>
+					<h1 align="left" style="font-weight: bold; padding-left: 10%; padding-bottom: 20px;">Day-2 : Sight seeing places (pick up and drop will be from Hotel)</h1>
+					<ul align="left" style="font-style: italic; padding-left: 20%; padding-bottom: 20px;">
+						<li>Coakers Walk,</li>
+						<li>Vaigai Dam View,</li>
+					</ul>
+						<a href="#Budget Package">
+							<button style="width: 100px;height: 40px;float: right;background-color: #0091EA;">Read More...</button>
+						</a>
+					</div>
+					<div class="clear"></div>					
+				</div>
+
+
+			<div id="Budget Package" class="modalDialog">
+			    <div>	<a href="#close" title="Close" class="close">X</a>
+				<div class="grids_of_2">
+					<h4 align="middle" style="padding-bottom: 5px; font-size: 30px; font-style:italic;">Budget Package</h4>
+					<img src="/images/spr.png" style="display: block; margin: 0 auto;padding-bottom: 10px">
+					<h1 align="left" style="font-size: 120%; font-weight: bold; padding-left: 10%; padding-bottom: 20px;">Day-1 : Sight Seeing around the lake (By Walk)</h1>
+					<h1 align="left" style="font-size: 120%; font-weight: bold; padding-left: 10%; padding-bottom: 20px;">Day-2 : Sight seeing places (pick up and drop will be from Hotel)</h1>
+					<ul align="left" style="font-size: 120%; font-style: italic; padding-left: 20%; padding-bottom: 20px;">
+						<li>Coakers Walk</li>
+						<li>Vaigai Dam View</li>
+						<li>Upper Lake View</li>
+						<li>Moiré Point</li>						
+						<li>Shanthi Valley</li>
+						<li>Green Valley View(sucid point)</li>
+						<li>Pine Tree Forest</li>
+						<li>Guna Cave(devils kitchen)</li>
+						<li>Piller Rock</li>
+						<li>Golf Course</li>
+						<li>Pambar Falls</li>
+					</ul>
+					<h1 align="left" style="font-size: 120%; font-weight: bold; padding-left: 10%; padding-bottom: 20px;">Day-3 : Picnic (Travel Cab Charge) </h1>
+					<ul align="left" style="font-size: 120%; font-style: italic; padding-left: 20%; padding-bottom: 20px;">
+						<li>La Saleth Church</li>
+						<li>Vattakanal Falls</li>
+						<li>Bear Shola Falls</li>
+						<li>Lion Cave</li>
+						<li>Mountain View Echo Rock</li>
+						<li>Dolphin Nose</li>
+						<li>500 Years Old Tree</li>
+						<li>Kodai Lake or City Drop</li>
+					</ul>
+					<h1 align="left" style="font-size: 120%; font-weight: bold; padding-left: 10%; padding-bottom: 20px;">Package Complimentary </h1>
+					<ul align="left" style="font-size: 120%; font-style: italic; padding-left: 20%; padding-bottom: 20px;">
+						<li>2 Night Accomodation</li>
+						<li>Morning Bed coffee/ tea for 3 days</li>
+						<li>Pick Up &amp; Drop Service</li>
+					</ul>
+					<h1 style="width: 135px;height: 40px;float: left; position: absolute; left: 10%; color: #0091EA; font-size: 150%;"> INR : 7,500</h1>
+					<a href="/booking">
+						<button style="width: 100px;height: 40px;position: absolute; float: right; right: 10%; background-color: #0091EA; margin-bottom: 10px;">Book</button>
+					</a>
+					<div class="clear"></div>				
+				</div>
+			    </div>
+			</div>
+
+			<hr>
+
+			<div class="grids_of_2">
+					<div class="grids_of_img">
+						<img src="static/images/g4.jpg" alt=""/>
+					</div>
+					<div class="grids_of_para">
+						<h4 align="middle" style="padding-bottom: 5px; font-weight:bold;">Excutive Package</h4>
+					<h1 align="left" style="font-weight: bold; padding-left: 10%; padding-bottom: 20px;">Day-1 : Sight seeing places (pick up and drop will be from Hotel)</h1>
+					<h1 align="left" style="font-weight: bold; padding-left: 10%; padding-bottom: 20px;">Day-2 : Sight seeing places (pick up and drop will be from Hotel)</h1>
+					<ul align="left" style="font-style: italic; padding-left: 20%; padding-bottom: 20px;">
+						<li>Coakers Walk,</li>
+						<li>Vaigai Dam View,</li>
+					</ul>
+						<a href="#Excutive Package">
+							<button style="width: 100px;height: 40px;float: right;background-color: #0091EA;">Read More...</button>
+						</a>
+					</div>
+					<div class="clear"></div>					
+				</div>
+
+			<div id="Excutive Package" class="modalDialog">
+			    <div>	<a href="#close" title="Close" class="close">X</a>
+				<div class="grids_of_2">
+					<h4 align="middle" style="padding-bottom: 5px; font-size: 30px; font-style:italic;">Excutive Package</h4>
+					<img src="/images/spr.png" style="display: block; margin: 0 auto;padding-bottom: 10px">
+					<h1 align="left" style="font-size: 120%; font-weight: bold; padding-left: 10%; padding-bottom: 20px;">Day-1 : Sight seeing places (pick up and drop will be from Hotel)</h1>
+					<ul align="left" style="font-size: 120%; font-style: italic; padding-left: 20%; padding-bottom: 20px;">
+						<li>Coakers Walk</li>
+						<li>Vaigai Dam View</li>
+						<li>Upper Lake View</li>
+						<li>Moiré Point</li>						
+						<li>Shanthi Valley</li>
+						<li>Green Valley View(sucid point)</li>
+						<li>Pine Tree Forest</li>
+						<li>Guna Cave(devils kitchen)</li>
+						<li>Piller Rock</li>
+						<li>Golf Course</li>
+						<li>Pambar Falls</li>
+					</ul>
+					<h1 align="left" style="font-size: 120%; font-weight: bold; padding-left: 10%; padding-bottom: 20px;">Day-2 : Picnic (Travel Cab Charge) </h1>
+					<ul align="left" style="font-size: 120%; font-style: italic; padding-left: 20%; padding-bottom: 20px;">
+						<li>La Saleth Church</li>
+						<li>Vattakanal Falls</li>
+						<li>Bear Shola Falls</li>
+						<li>Lion Cave</li>
+						<li>Mountain View Echo Rock</li>
+						<li>Dolphin Nose</li>
+						<li>500 Years Old Tree</li>
+						<li>Kodai Lake or City Drop</li>
+					</ul>
+					<h1 align="left" style="font-size: 120%; font-weight: bold; padding-left: 10%; padding-bottom: 20px;">Day-3 : Forest Sight Seen / Trekking (Travel Cab Charge) </h1>
+					<ul align="left" style="font-size: 120%; font-style: italic; padding-left: 20%; padding-bottom: 20px;">
+						<li>Silent Valley,</li>
+						<li>Green Mountain View,</li>
+						<li>Fire Tower,</li>
+						<li>Medicine Forest View,</li>
+						<li>Cap’s Fly Valley,</li>
+						<li>Beijam Lake View,</li>
+						<li>Berijam Lake,</li>
+						<li>Kodai City Drop.</li>
+					</ul>
+					<h1 align="left" style="font-size: 120%; font-weight: bold; padding-left: 10%; padding-bottom: 20px;">Package Complimentary </h1>
+					<ul align="left" style="font-size: 120%; font-style: italic; padding-left: 20%; padding-bottom: 20px;">
+						<li>2 Night Accomodation</li>
+						<li>Morning Bed coffee/ tea for 3 days</li>
+						<li>Pick Up &amp; Drop Service</li>
+					</ul>
+					<h1 style="width: 135px;height: 40px;float: left; position: absolute; left: 10%; color: #0091EA; font-size: 150%;"> INR : 9,500</h1>
+					<a href="/booking">
+						<button style="width: 100px;height: 40px;position: absolute; float: right; right: 10%; background-color: #0091EA; margin-bottom: 10px;">Book</button>
+					</a>
+					<div class="clear"></div>				
+				</div>
+			    </div>
+			</div>
+
+			<hr>
+
+			<div class="grids_of_2">
+					<div class="grids_of_img">
+						<img src="static/images/g4.jpg" alt=""/>
+					</div>
+					<div class="grids_of_para">
+						<h4 align="middle" style="padding-bottom: 5px; font-weight:bold;">Elite Package</h4>
+					<ul align="left" style="font-size: 120%; font-style: italic; padding-left: 20%; padding-bottom: 20px;">
+						<li>La Saleth Church</li>
+						<li>Vattakanal Falls</li>
+						<li>Bear Shola Falls</li>
+						<li>Lion Cave</li>
+						<li>Mountain View Echo Rock</li>
+					</ul>
+						<a href="#Elite Package">
+							<button style="width: 100px;height: 40px;float: right;background-color: #0091EA;">Read More...</button>
+						</a>
+					</div>
+					<div class="clear"></div>					
+				</div>
+
+			<div id="Elite Package" class="modalDialog">
+			    <div>	<a href="#close" title="Close" class="close">X</a>
+				<div class="grids_of_2">
+					<h4 align="middle" style="padding-bottom: 5px; font-size: 30px; font-style:italic;">Elite Package</h4>
+					<img src="/images/spr.png" style="display: block; margin: 0 auto;padding-bottom: 10px">
+					<h1 align="left" style="font-size: 120%; font-weight: bold; padding-left: 10%; padding-bottom: 20px;">Day-1 : Picnic (Travel Cab Charge) </h1>
+					<ul align="left" style="font-size: 120%; font-style: italic; padding-left: 20%; padding-bottom: 20px;">
+						<li>La Saleth Church</li>
+						<li>Vattakanal Falls</li>
+						<li>Bear Shola Falls</li>
+						<li>Lion Cave</li>
+						<li>Mountain View Echo Rock</li>
+						<li>Dolphin Nose</li>
+						<li>500 Years Old Tree</li>
+						<li>Kodai Lake or City Drop</li>
+					</ul>
+					<h1 align="left" style="font-size: 120%; font-weight: bold; padding-left: 10%; padding-bottom: 20px;">Day-2 : Forest Sight Seen / Trekking (Travel Cab Charge) </h1>
+					<ul align="left" style="font-size: 120%; font-style: italic; padding-left: 20%; padding-bottom: 20px;">
+						<li>Silent Valley,</li>
+						<li>Green Mountain View,</li>
+						<li>Fire Tower,</li>
+						<li>Medicine Forest View,</li>
+						<li>Cap’s Fly Valley,</li>
+						<li>Beijam Lake View,</li>
+						<li>Berijam Lake,</li>
+						<li>Kodai City Drop.</li>
+					</ul>
+					<h1 align="left" style="font-size: 120%; font-weight: bold; padding-left: 10%; padding-bottom: 20px;">Day-3 : Village Sight Seeing </h1>
+					<ul align="left" style="font-size: 120%; font-style: italic; padding-left: 20%; padding-bottom: 20px;">
+						<li>Pine Tree Forest,</li>
+						<li>Gundar Falls,</li>
+						<li>Mahalakshmi Temple,</li>
+						<li>Palani View,</li>
+						<li>Poombarai Village View,</li>
+						<li>Murugan Temple 3000Years Old,</li>
+						<li>Lake View,</li>
+						<li>Kodai Lake</li>
+					</ul>
+					<h1 align="left" style="font-size: 120%; font-weight: bold; padding-left: 10%; padding-bottom: 20px;">Package Complimentary </h1>
+					<ul align="left" style="font-size: 120%; font-style: italic; padding-left: 20%; padding-bottom: 20px;">
+						<li>2 Night Accomodation</li>
+						<li>Morning Bed coffee/ tea for 3 days</li>
+						<li>Pick Up &amp; Drop Service</li>
+					</ul>
+					<h1 style="width: 135px;height: 40px;float: left; position: absolute; left: 10%; color: #0091EA; font-size: 150%;"> INR : 10,000</h1>
+					<a href="/booking">
+						<button style="width: 100px;height: 40px;position: absolute; float: right; right: 10%; background-color: #0091EA; margin-bottom: 10px;">Book</button>
+					</a>
+					<div class="clear"></div>				
+				</div>
+			    </div>
+			</div>
+
+			<hr>
+
+			<div class="grids_of_2">
+					<div class="grids_of_img">
+						<img src="static/images/g4.jpg" alt=""/>
+					</div>
+					<div class="grids_of_para">
+						<h4 align="middle" style="padding-bottom: 5px; font-weight:bold;">Premium Package</h4>
+					<h1 align="left" style="font-weight: bold; padding-left: 10%; padding-bottom: 20px;">Day-1 : Sight seeing places (pick up and drop will be from Hotel)</h1>
+					<h1 align="left" style="font-weight: bold; padding-left: 10%; padding-bottom: 20px;">Day-2 : Sight seeing places (pick up and drop will be from Hotel)</h1>
+					<ul align="left" style="font-style: italic; padding-left: 20%; padding-bottom: 20px;">
+						<li>Coakers Walk,</li>
+						<li>Vaigai Dam View,</li>
+					</ul>
+						<a href="#Premium Package">
+							<button style="width: 100px;height: 40px;float: right;background-color: #0091EA;">Read More...</button>
+						</a>
+					</div>
+					<div class="clear"></div>					
+				</div>
+
+			<div id="Premium Package" class="modalDialog">
+			    <div>	<a href="#close" title="Close" class="close">X</a>
+				<div class="grids_of_2">
+					<h4 align="middle" style="padding-bottom: 5px; font-size: 30px; font-style:italic;">Premium Package</h4>
+					<img src="/images/spr.png" style="display: block; margin: 0 auto;padding-bottom: 10px">
+					<h1 align="left" style="font-size: 120%; font-weight: bold; padding-left: 10%; padding-bottom: 20px;">Day-1 : Sight seeing places (pick up and drop will be from Hotel)</h1>
+					<ul align="left" style="font-size: 120%; font-style: italic; padding-left: 20%; padding-bottom: 20px;">
+						<li>Coakers Walk</li>
+						<li>Vaigai Dam View</li>
+						<li>Upper Lake View</li>
+						<li>Moiré Point</li>						
+						<li>Shanthi Valley</li>
+						<li>Green Valley View(sucid point)</li>
+						<li>Pine Tree Forest</li>
+						<li>Guna Cave(devils kitchen)</li>
+						<li>Piller Rock</li>
+						<li>Golf Course</li>
+						<li>Pambar Falls</li>
+					</ul>
+					<h1 align="left" style="font-size: 120%; font-weight: bold; padding-left: 10%; padding-bottom: 20px;">Day-2 : Picnic (Travel Cab Charge) </h1>
+					<ul align="left" style="font-size: 120%; font-style: italic; padding-left: 20%; padding-bottom: 20px;">
+						<li>La Saleth Church</li>
+						<li>Vattakanal Falls</li>
+						<li>Bear Shola Falls</li>
+						<li>Lion Cave</li>
+						<li>Mountain View Echo Rock</li>
+						<li>Dolphin Nose</li>
+						<li>500 Years Old Tree</li>
+						<li>Kodai Lake or City Drop</li>
+					</ul>
+					<h1 align="left" style="font-size: 120%; font-weight: bold; padding-left: 10%; padding-bottom: 20px;">Day-3 : Forest Sight Seen / Trekking (Travel Cab Charge) </h1>
+					<ul align="left" style="font-size: 120%; font-style: italic; padding-left: 20%; padding-bottom: 20px;">
+						<li>Silent Valley,</li>
+						<li>Green Mountain View,</li>
+						<li>Fire Tower,</li>
+						<li>Medicine Forest View,</li>
+						<li>Cap’s Fly Valley,</li>
+						<li>Beijam Lake View,</li>
+						<li>Berijam Lake,</li>
+						<li>Kodai City Drop.</li>
+					</ul>
+					<h1 align="left" style="font-size: 120%; font-weight: bold; padding-left: 10%; padding-bottom: 20px;">Day-4 : Village Sight Seeing </h1>
+					<ul align="left" style="font-size: 120%; font-style: italic; padding-left: 20%; padding-bottom: 20px;">
+						<li>Pine Tree Forest,</li>
+						<li>Gundar Falls,</li>
+						<li>Mahalakshmi Temple,</li>
+						<li>Palani View,</li>
+						<li>Poombarai Village View,</li>
+						<li>Murugan Temple 3000Years Old,</li>
+						<li>Lake View,</li>
+						<li>Kodai Lake</li>
+					</ul>
+					<h1 align="left" style="font-size: 120%; font-weight: bold; padding-left: 10%; padding-bottom: 20px;">Package Complimentary </h1>
+					<ul align="left" style="font-size: 120%; font-style: italic; padding-left: 20%; padding-bottom: 20px;">
+						<li>2 Night Accomodation</li>
+						<li>Morning Bed coffee/ tea for 3 days</li>
+						<li>Pick Up &amp; Drop Service</li>
+					</ul>
+					<h1 style="width: 135px;height: 40px;float: left; position: absolute; left: 10%; color: #0091EA; font-size: 150%;"> INR : 13,500</h1>
+					<a href="/booking">
+						<button style="width: 100px;height: 40px;position: absolute; float: right; right: 10%; background-color: #0091EA; margin-bottom: 10px;">Book</button>
+					</a>
+					<div class="clear"></div>				
+				</div>
+			    </div>
+			</div>
+
+			<hr>
+
+		</div>
+		<!-- <div class="sidebar">
+			 <div class="date_btn">
+				<form>
+					<input type="submit" value="book now" style="width: 82px;">
+				</form>
+			</div>
+			<h4>room features</h4>
+			<ul class="s_nav">
+				<li><a href="#">laptop-size safe</a></li>
+				<li><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
+				<li><a href="#">Etiam malesuada leo ornare</a></li>
+				<li><a href="#">Sed eu magna sed lorem tincidunt</a></li>
+				<li><a href="#">Proin id diam eleifend neque auctor scelerisque.</a></li>
+			</ul>
+			<h4>we accept</h4>
+			<ul class="s_nav1">
+				<li><a class="icon1" href="#"></a></li>
+				<li><a class="icon2" href="#"></a></li>
+				<li><a class="icon3" href="#"></a></li>
+				<li><a class="icon4" href="#"></a></li>
+			</ul>
+		</div> -->
+		<div class="clear"></div>
+	</div>
+</div>
+</div>		
+<!--start main -->
+<div class="footer_bg">
+<div class="wrap">
+<div class="footer">
+			<div class="copy">
+				<p class="link"><span>Policies :  <a href="/refund">Refund and Cancellation</a> | <a href="/privacy">Privacy Policies</a> | <a href="/terms">Terms and Conditions</a></span></p>
+			</div>
+			<div class="f_nav">
+				<ul>
+					<li><a href="/">home</a></li>
+					<li><a href="#">Hotels</a></li>
+					<li><a href="/booking">reservation</a></li>
+					<li><a href="/packages">Packages</a></li>
+					<li><a href="/contact">Contact</a></li>
+				</ul>
+			</div>
+			<div class="soc_icons">
+				<ul>
+					<li><a class="icon1" href="#"></a></li>
+					<li><a class="icon2" href="#"></a></li>
+					<li><a class="icon3" href="#"></a></li>
+					<li><a class="icon4" href="#"></a></li>
+					<li><a class="icon5" href="#"></a></li>
+					<div class="clear"></div>
+				</ul>	
+			</div>
+			<div class="clear"></div>
+</div>
+</div>
+</div>		
+</body>
+</html>
