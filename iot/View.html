@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>View Data</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+<script>
+    $(document).ready(function(){
+                  load();
+                });
+	</script>
+	<script>
+		function load(){
+			var text = "";
+                    $.getJSON("/query?Id=1", function(result){
+           
+                      var json = JSON.stringify(result);
+                  	  var jsonData = JSON.parse(json);
+                  	  if (jsonData.State == 'ON') {
+                  	  	text += "<button style='background : #0066cc' disabled>ON</button><br><button style='background:#000' disabled>OFF</button>";
+                  	  }
+                  	  else{
+                  	  	text += "<button style='background : #000' disabled>ON</button><br><button style='background:#0066cc' disabled>OFF</button>";
+                  	  }
+                  	  $('#server-name').html(text);
+                  	  setTimeout(function() {
+                    load();
+                }, 5);
+                    });
+
+		}
+	</script>
+	<div id="server-name"></div>
+  <hr>
+  <form method="post" action="/">
+    <input type="hidden" name="Id" value="1">
+  <input type="radio" name="State" value="ON"> ON<br>
+  <input type="radio" name="State" value="OFF"> OFF<br>
+  <input type="submit">  
+</form> 
+
+</body>
+</html>
